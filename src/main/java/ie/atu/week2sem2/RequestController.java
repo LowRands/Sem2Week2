@@ -18,5 +18,9 @@ public class RequestController {
     public String details(@RequestParam String name, @RequestParam int age){
         return "Hello " + name + ", Age: " + age;
     }
+    @GetMapping("/person")
+    public Person getPerson(){
+        return new Person("Ethan Lourens",20);
+    }
 }
 
